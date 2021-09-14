@@ -59,6 +59,8 @@ main{
       text-align: center;
       flex-wrap: wrap;
       margin: 30px;
+      font-weight: 400;
+      font-size: 28px;;
     }
 
     .input-wrapper{
@@ -79,7 +81,7 @@ main{
       }
 
       .error-msg{
-        font-family: 12px;
+        font-family: 11px;
         font-weight: 100;
         position: absolute;
         top: 36px;

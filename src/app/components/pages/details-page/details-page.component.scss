@@ -1,0 +1,98 @@
+@import 'src/styles/variables';
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: auto;
+
+  .title{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    img{
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+
+      @media screen and (max-width: $mobile-l){
+        width: 180px;
+        height: 180px;
+      }
+    }
+
+    .bio{
+      max-width: 50vw;
+      flex-direction: column;
+      display: flex;
+      flex-wrap: wrap;
+
+      @media screen and (max-width: $mobile-l){
+        max-width: 90vw;
+      }
+
+
+      h1{
+        font-size: 80px;
+        margin: 10px 0;
+
+
+        @media screen and (max-width: $mobile-l){
+          font-size: 32px;
+          text-align: center;
+        }
+      }
+
+      h2{
+
+        flex-wrap: wrap;
+        @media screen and (max-width: $mobile-l){
+          font-size: 20px;
+          text-align: center;
+        }
+      }
+    }
+
+
+  }
+  ul{
+    margin: 20px;
+    font-size: 30px;
+    list-style-type: none;
+
+
+    @media screen and (max-width: $mobile-l){
+      font-size: 16px;
+      padding: 0;
+    }
+
+    li{
+      display: flex;
+      margin: 20px;
+
+      .items{
+        display: flex;
+        align-items: center;
+      }
+
+      i{
+        margin: auto 8px;
+      }
+
+      .repo-button{
+        margin-left: 50px;
+        font-size: 20px;
+
+        @media screen and (max-width: $mobile-l){
+          margin-left: 20px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+}

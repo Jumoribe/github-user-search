@@ -1,0 +1,97 @@
+@import 'src/styles/variables';
+
+main{
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../../../../assets/images/githubfigurine.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+  @media screen and (max-width: $hdSize){
+    background-image: url('../../../../assets/images/githubfigurine.lg.jpg');
+  }
+
+  @media screen and (max-width: $tablet-l){
+    justify-content: flex-end;
+  }
+
+  @media screen and (max-width: $mobile-l){
+    background-image: url('../../../../assets/images/githubfigurine.sm.jpg');
+    background-size: contain;
+    justify-content: flex-end;
+  }
+
+  .card{
+    border-radius: 5px;
+    background-color: $black-card-opacity;
+    max-width: 400px;
+    height: 279px;
+    align-self: flex-end;
+    margin: 60px;
+
+    @media screen and (max-width: $tablet-l){
+      align-self: center;
+      background-color: $black-card-opacity;
+      font-size: 16px;
+      @media screen and (min-height: $tablet-l){ //tablets que possuem a altura da tela maior
+        width: 100%;
+        max-width: none;
+        background-color: $black-card;
+        margin: 0;
+      }
+    }
+
+    @media screen and (max-width: $mobile-l){
+      width: 100%;
+      font-size: 12px;
+      max-width: none;
+      font-weight: 400;
+      background-color: $black-card;
+      margin: 0px;
+    }
+
+    h1{
+      color: $white;
+      text-align: center;
+      flex-wrap: wrap;
+      margin: 30px;
+    }
+
+    .input-wrapper{
+      margin: auto;
+      max-width: 80%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      @media screen and (max-width: $tablet-l){
+        @media screen and (min-height: $tablet-l){ //tablets que possuem a altura da tela maior
+          max-width: 300px;
+        }
+      }
+
+      input{
+        margin-bottom: 20px;
+      }
+
+      .error-msg{
+        font-family: 12px;
+        font-weight: 100;
+        position: absolute;
+        top: 36px;
+      }
+
+      button{
+        margin: 20px auto 30px;
+        padding: 10px 20px;
+        justify-self: flex-end;
+      }
+
+    }
+  }
+}
+

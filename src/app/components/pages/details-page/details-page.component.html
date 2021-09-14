@@ -1,0 +1,46 @@
+<main>
+
+  <div class="title">
+
+    <img [src]="user.avatar_url"/>
+
+    <div class="bio">
+      <h1>{{user.name || 'Nome não informado' }}</h1>
+      <h2>{{user.bio || 'Descrição não informada'}}</h2>
+    </div>
+
+  </div>
+
+  <ul>
+
+    <li>
+      <div class="items"> <i class="fa fa-user-circle-o" aria-hidden="true"></i>Username: {{user.login}}</div>
+    </li>
+
+    <li>
+      <div class="items"> <i class="fa fa-users" aria-hidden="true"></i>Followers: {{user.followers}}</div>
+    </li>
+
+    <li>
+      <div class="items"> <i class="fa fa-bookmark" aria-hidden="true"></i> Following: {{user.following}}</div>
+    </li>
+
+    <li>
+      <div class="items"> <i class="fa fa-globe" aria-hidden="true"></i> Location: {{user.location || 'não informado'}}</div>
+    </li>
+
+    <li>
+      <div class="items"><i class="fa fa-star-o" aria-hidden="true"></i>Stars: {{starredUrlsLength || 0}}</div>
+    </li>
+
+    <li>
+      <div class="items">
+        <i class="fa fa-book" aria-hidden="true"></i> Repositories: {{respositoriesLength || 0}}
+        <button class="repo-button" *ngIf="respositoriesLength > 0" (click)="goToRepositories()">Ver repositórios</button>
+      </div>
+    </li>
+
+  </ul>
+
+</main>
+

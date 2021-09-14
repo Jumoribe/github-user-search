@@ -1,0 +1,17 @@
+
+<main>
+
+  <div class="card">
+
+    <h1>Comece a buscar desenvolvedores agora</h1>
+
+    <div class="input-wrapper">
+      <input [formControl]="githubUsername" type="text" (keyup.enter)="submitUser()"/>
+      <div class="error-msg" *ngIf="githubUsername.touched && githubUsername.invalid && githubUsername.value">Username inválido.</div>
+      <div class="error-msg" *ngIf="githubUsername.touched && !githubUsername.value">Preencha o username.</div>
+      <button (click)="submitUser()"> Buscar <i class="fa fa-search" aria-hidden="true"></i></button>
+    </div>
+
+  </div>
+
+</main>

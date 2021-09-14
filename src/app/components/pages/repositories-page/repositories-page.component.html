@@ -1,0 +1,36 @@
+<main>
+
+  <h1>Repositórios de {{username}}</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name
+          <i class="fa fa-sort-alpha-asc" aria-hidden="true" (click)="orderByAsc('name')"></i>
+          <i class="fa fa-long-arrow-up" aria-hidden="true" (click)="orderByDec('name')"></i>
+        </th>
+        <th>Watchers
+          <i class="fa fa-sort-numeric-asc" aria-hidden="true" (click)="orderByAsc('watchers')"></i>
+          <i class="fa fa-long-arrow-up" aria-hidden="true" (click)="orderByDec('watchers')"></i>
+        </th>
+        <th>Stars
+          <i class="fa fa-sort-numeric-asc" aria-hidden="true" (click)="orderByAsc('stargazers_count')"></i>
+          <i class="fa fa-long-arrow-up" aria-hidden="true" (click)="orderByDec('stargazers_count')"></i>
+        </th>
+        <th>Language
+          <i class="fa fa-sort-alpha-asc" aria-hidden="true" (click)="orderByAsc('language')"></i>
+          <i class="fa fa-long-arrow-up" aria-hidden="true" (click)="orderByDec('language')"></i>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let repo of repositories">
+        <td>{{repo.name}}</td>
+        <td>{{repo.watchers}}</td>
+        <td>{{repo.stargazers_count}}</td>
+        <td>{{repo.language || 'X'}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</main>

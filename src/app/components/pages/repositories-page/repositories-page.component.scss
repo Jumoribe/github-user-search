@@ -1,0 +1,46 @@
+@import 'src/styles/variables';
+
+h1 {
+  margin: 50px;
+  text-align: center;
+}
+
+table{
+  margin: 40px auto;
+  border-radius: 5px;
+
+  thead{
+    background-color: $button-background;
+    letter-spacing: 0.03em;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  tr{
+    border-radius: 5px;
+  }
+
+  th{
+    font-size: 16px;
+    width: 150px;
+    padding: 20px;
+    i{
+      cursor: pointer;
+      padding: 4px;
+    }
+    @media screen and (max-width: $mobile-l){
+      width: 50px;
+    }
+  }
+
+  td{
+    background-color: $white;
+    text-align: center;
+    color: $darkGrey;
+    letter-spacing: 0.03em;
+    padding: 18px 10px;
+    margin: 10px;
+    border-radius: 1px;
+  }
+}
+
